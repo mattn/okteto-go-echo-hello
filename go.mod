@@ -1,4 +1,4 @@
-module github.com/mattn/okteto-go-echo-hello
+module app
 
 go 1.18
 
