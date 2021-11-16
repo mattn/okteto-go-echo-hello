@@ -1,0 +1,16 @@
+name: okteto-go-echo-hello
+autocreate: true
+image: okteto/golang:1
+command: /go/bin/app
+securityContext:
+  capabilities:
+    add:
+    - SYS_PTRACE
+volumes:
+- /go/pkg/
+- /root/.cache/go-build/
+sync:
+- .:/usr/src/app
+forward:
+- 2345:2345
+- 8080:8080
