@@ -6,4 +6,4 @@ COPY main.go go.mod go.sum ./
 RUN go install
 
 COPY . .
-CMD ["/go/bin/app"]
+CMD ["app"]
